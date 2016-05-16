@@ -7,6 +7,5 @@ public class Animal {
     String name;
     String species;
     double weight;
-
-    //constructor
+    int averageLifeSpan;
 }

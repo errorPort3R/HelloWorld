@@ -12,6 +12,10 @@ public class Person {
     Person[] family = new Person[10];
 
     //constructors
+    public Person() {
+
+    }
+
     public Person(String firstName, String lastName)
     {
         this.firstName = firstName;

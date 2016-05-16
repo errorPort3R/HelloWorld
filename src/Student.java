@@ -18,6 +18,26 @@ public class Student {
         CURRENT_ID_NUMBER++;
     }
 
+    public String getFirstName()
+    {
+        return person.getFirstName();
+    }
+
+    public String getLastName()
+    {
+        return person.getLastName();
+    }
+
+    public String getName()
+    {
+        return person.getName();
+    }
+
+    public int getID()
+    {
+        return id;
+    }
+
     public double getGPA()
     {
         return gpa;

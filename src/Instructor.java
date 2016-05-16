@@ -9,6 +9,7 @@ public class Instructor {
     private Person person;
     private final int id;
     private Course[] coursesAssigned = new Course[MAX_NUM_COURSES_PER_SEMESTER];
+    private int count = 0;
 
     public Instructor(String firstName, String lastName)
     {
@@ -17,13 +18,57 @@ public class Instructor {
         INSTRUCTOR_IDS++;
     }
 
+    public String getFirstName()
+    {
+        return person.getFirstName();
+    }
+
+    public String getLastName()
+    {
+        return person.getLastName();
+    }
+
+    public String getName()
+    {
+        return person.getName();
+    }
+
     public int getInstructorId()
     {
         return id;
     }
-    public Course getCourse(int i)
+
+    public Course[] getCourses()
     {
-        return coursesAssigned[i];
+        return coursesAssigned;
+    }
+
+    public void addCourse(Course course)
+    {
+        coursesAssigned[count] = course;
+        count++;
+    }
+
+    public void removeCourse(String courseName)
+    {
+        boolean foundIt = false;
+        for(int i=0;i<count;i++)
+        {
+            if (courseName.equals(coursesAssigned[i]))
+            {
+                foundIt = true;
+                coursesAssigned[i]=coursesAssigned[i+1];
+                count--;
+            }
+            else if (foundIt)
+            {
+                coursesAssigned[i]=coursesAssigned[i+1];
+            }
+        }
+        if(!foundIt)
+        {
+            System.out.printf("\nNot Found!!!");
+        }
     }
 
 }
