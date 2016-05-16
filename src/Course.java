@@ -43,6 +43,16 @@ public class Course {
         return sections[i];
     }
 
+    public int getNumOfSections()
+    {
+        return count;
+    }
+
+    public Instructor[] getInstructors()
+    {
+        return instructors;
+    }
+
     public void setSection(String name, int locationInArray)
     {
         sections[locationInArray] = name;

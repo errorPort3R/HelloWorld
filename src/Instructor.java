@@ -38,6 +38,11 @@ public class Instructor {
         return id;
     }
 
+    public int getNumOfCoursesTaught()
+    {
+        return count;
+    }
+
     public Course[] getCourses()
     {
         return coursesAssigned;

@@ -30,6 +30,10 @@ public class Major {
     {
         return totalCreditHours;
     }
+    public int numOfCourses()
+    {
+        return count;
+    }
 
     public void addCourse(Course course)
     {
