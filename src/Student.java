@@ -2,12 +2,13 @@
  * Created by jeffryporter on 5/16/16.
  */
 public class Student {
+
     //declare variables
     private Person person;
     private final int id;
     private double gpa;
     private int creditHoursTaken;
-    private static int CURRENT_ID_NUMBER = 10110;
+    private static int CURRENT_ID_NUMBER = 8675309;
 
     //constructor
     public Student(String firstName, String lastName)

@@ -3,11 +3,12 @@
  * AM classwork
  */
 public class Person {
+
     //declare variables
-    String firstName;
-    String lastName;
-    int age;
-    boolean isAlive = true;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private boolean isAlive = true;
     Person[] family = new Person[10];
 
     //constructors
