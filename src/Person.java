@@ -6,6 +6,7 @@ public class Person {
 
     //declare variables
     private static int FAMILY_SIZE = 10;
+    public final static int SENTINAL = -1;
     private String firstName;
     private String lastName;
     private int age;
@@ -13,11 +14,12 @@ public class Person {
     Person[] family = new Person[FAMILY_SIZE];
 
     //constructors
-    public Person(String firstName, String lastName)
+    public Person(String firstName, String lastName, int age, boolean isAlive)
     {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.isAlive = true;
+        this.age = age;
+        this.isAlive = isAlive;
     }
 
     public Person(String name, int age, boolean isAlive)
@@ -55,7 +57,7 @@ public class Person {
 
     public void setName(String newName)
     {
-        if (isValidName(newName))
+        if (isFullName(newName))
         {
             String[] fields = newName.split(" ");
             firstName = fields[0];
@@ -92,7 +94,7 @@ public class Person {
         isAlive = true;
     }
 
-    public static boolean isValidName(String newName)
+    public static boolean isFullName(String newName)
     {
         return newName.contains(" ");
     }

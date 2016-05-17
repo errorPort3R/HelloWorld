@@ -38,9 +38,9 @@ public class Course {
         return creditHours;
     }
 
-    public String getSpecificSection(int i)
+    public String[] getSpecificSections()
     {
-        return sections[i];
+        return sections;
     }
 
     public int getNumOfSections()
@@ -55,7 +55,14 @@ public class Course {
 
     public void setSection(String name, int locationInArray)
     {
-        sections[locationInArray] = name;
+        if (isValidLocation(locationInArray))
+        {
+            sections[locationInArray] = name;
+        }
+        else
+        {
+            System.out.printf("\nNot a valid location");
+        }
     }
 
     public void addSection(String name)
@@ -64,13 +71,41 @@ public class Course {
         count++;
     }
 
-    public Instructor getSpecificInstructor(int i)
-    {
-        return instructors[i];
-    }
-
     public void setInstructor(Instructor instructor, int i)
     {
-        instructors[i] = instructor;
+        if (isValidLocation(i))
+        {
+            instructors[i] = instructor;
+        }
+        else
+        {
+            System.out.printf("\nNot a valid location");
+        }
+    }
+
+    public void setCreditHours(int hours)
+    {
+        creditHours = hours;
+    }
+
+    public void setCourseName(String name)
+    {
+        courseName = name;
+    }
+
+    public void setCourseID(String id)
+    {
+        courseID = id;
+    }
+
+    //public void setCount(int count)
+    //{
+    //    this.count = count;
+    //}
+
+    private boolean isValidLocation(int i)
+    {
+        boolean isValid = (i >= 0 && i < count);
+        return isValid;
     }
 }
