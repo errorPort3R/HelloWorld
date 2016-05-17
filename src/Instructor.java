@@ -4,7 +4,7 @@
 public class Instructor {
 
     //declare variables
-    private int MAX_NUM_COURSES_PER_SEMESTER = 15;
+    private static int MAX_NUM_COURSES_PER_SEMESTER = 15;
     private static int INSTRUCTOR_IDS = 10110;
     private Person person;
     private final int id;

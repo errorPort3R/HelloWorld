@@ -5,21 +5,35 @@
 public class Person {
 
     //declare variables
+    private static int FAMILY_SIZE = 10;
     private String firstName;
     private String lastName;
     private int age;
-    private boolean isAlive = true;
-    Person[] family = new Person[10];
+    private boolean isAlive;
+    Person[] family = new Person[FAMILY_SIZE];
 
     //constructors
-    public Person() {
-
-    }
-
     public Person(String firstName, String lastName)
     {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.isAlive = true;
+    }
+
+    public Person(String name, int age, boolean isAlive)
+    {
+        if (isValidName(name))
+        {
+            String[] fields = name.split(" ");
+            firstName = fields[0];
+            lastName = fields[(fields.length - 1)];
+        }
+        else
+        {
+            firstName = name;
+        }
+        this.age = age;
+        this.isAlive = isAlive;
     }
 
     //methods
@@ -35,7 +49,7 @@ public class Person {
 
     public String getName()
     {
-        return firstName + " " + lastName;
+        return (firstName + " " + lastName);
     }
 
     public void setFirstName(String newName)
@@ -47,6 +61,21 @@ public class Person {
     {
         lastName = newName;
     }
+
+    public void setName(String newName)
+    {
+        if (isValidName(newName))
+        {
+            String[] fields = newName.split(" ");
+            firstName = fields[0];
+            lastName = fields[(fields.length - 1)];
+        }
+        else
+        {
+            firstName = newName;
+        }
+    }
+
     public int getAge()
     {
         return age;
@@ -57,8 +86,23 @@ public class Person {
         age = newAge;
     }
 
+    public boolean getIsAlive()
+    {
+        return isAlive;
+    }
+
     public void hasDied()
     {
         isAlive = false;
+    }
+
+    public void hasRessurected()
+    {
+        isAlive = true;
+    }
+
+    public static boolean isValidName(String newName)
+    {
+        return newName.contains(" ");
     }
 }
