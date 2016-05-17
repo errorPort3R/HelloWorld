@@ -94,7 +94,7 @@ public class Student {
         creditHoursTaken = creditHours;
     }
 
-    public boolean isValidGPA(double newGPA)
+    public static boolean isValidGPA(double newGPA)
     {
         boolean isValid = (newGPA>=0 && newGPA<=4.0);
         return isValid;

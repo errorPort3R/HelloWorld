@@ -87,7 +87,7 @@ public class Email {
         }
     }
 
-    public boolean isValidTime(int time)
+    public static boolean isValidTime(int time)
     {
         boolean isValid = time >= 0;
         return isValid;

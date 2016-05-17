@@ -80,7 +80,7 @@ public class Major {
         }
     }
 
-    public boolean exists(Course course, Course comparative)
+    public static boolean exists(Course course, Course comparative)
     {
         boolean isInTheList = course.equals(comparative);
         return isInTheList;
