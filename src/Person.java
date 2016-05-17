@@ -22,16 +22,7 @@ public class Person {
 
     public Person(String name, int age, boolean isAlive)
     {
-        if (isValidName(name))
-        {
-            String[] fields = name.split(" ");
-            firstName = fields[0];
-            lastName = fields[(fields.length - 1)];
-        }
-        else
-        {
-            firstName = name;
-        }
+        setName(name);
         this.age = age;
         this.isAlive = isAlive;
     }
