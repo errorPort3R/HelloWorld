@@ -70,10 +70,12 @@ public class Email {
     {
         this.body = body;
     }
+
     public void setDestination(String destination)
     {
         this.destination = destination;
     }
+
     public void setTime(int time)
     {
         if (isValidTime(time))

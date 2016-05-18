@@ -5,7 +5,7 @@
 public class Person {
 
     //declare variables
-    private static int FAMILY_SIZE = 10;
+    private static final int FAMILY_SIZE = 10;
     public final static int SENTINAL = -1;
     private String firstName;
     private String lastName;
@@ -27,6 +27,11 @@ public class Person {
         setName(name);
         this.age = age;
         this.isAlive = isAlive;
+    }
+
+    public Person()
+    {
+
     }
 
     //methods
