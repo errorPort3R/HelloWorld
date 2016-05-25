@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by jeffryporter on 5/16/16.
  * AM classwork
@@ -45,10 +47,10 @@ public class Person {
         return lastName;
     }
 
-    public String getName()
-    {
-        return (firstName + " " + lastName);
-    }
+//    public String getName()
+//    {
+//        return (firstName + " " + lastName);
+//    }
 
     public void setFirstName(String newName)
     {
@@ -102,5 +104,16 @@ public class Person {
     public static boolean isFullName(String newName)
     {
         return newName.contains(" ");
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", isAlive=" + isAlive +
+                ", family=" + Arrays.toString(family) +
+                '}';
     }
 }
