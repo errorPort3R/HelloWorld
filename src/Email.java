@@ -95,4 +95,14 @@ public class Email {
         return isValid;
     }
 
+    @Override
+    public String toString() {
+        return "Email{" +
+                "subject='" + subject + '\'' +
+                ", body='" + body + '\'' +
+                ", destination='" + destination + '\'' +
+                ", time=" + time +
+                ", author=" + author +
+                '}';
+    }
 }
