@@ -4,7 +4,7 @@ import java.util.Arrays;
  * Created by jeffryporter on 5/16/16.
  * AM classwork
  */
-public class Person {
+public class Person implements Comparable<Person>{
 
     //declare variables
     private static final int FAMILY_SIZE = 10;
@@ -116,4 +116,12 @@ public class Person {
                 ", family=" + Arrays.toString(family) +
                 '}';
     }
+
+    @Override
+    public int compareTo(Person o)
+    {
+        return this.getFirstName().compareTo(o.getFirstName());
+    }
+
+
 }

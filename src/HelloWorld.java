@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 /**
@@ -9,30 +10,30 @@ public class HelloWorld
     public static void main(String[] args)
     {
 
-        ArrayList<String> names = new ArrayList<String>();
-        names.add("alice");
-        names.add("bob");
-        names.add("Charlie");
-
-        String name = names.get(0);
-
-        names.remove(1);
-
-        HashMap<String, String> person = new HashMap<String, String>();
-        person.put("name", "Alice Cooper");
-
-        person.put("address", "17 Princess Street");
-
-        person.get("name");
-
-        person.remove("name");
-
-        HashMap<String, Integer> scores = new HashMap<String, Integer>();
-        scores.put("John", 10);
-        scores.put("Bob", 7);
-        scores.put("Charlie", 5);
-
-        int score = scores.get("Bob");
+//        ArrayList<String> names = new ArrayList<String>();
+//        names.add("alice");
+//        names.add("bob");
+//        names.add("Charlie");
+//
+//        String name = names.get(0);
+//
+//        names.remove(1);
+//
+//        HashMap<String, String> person = new HashMap<String, String>();
+//        person.put("name", "Alice Cooper");
+//
+//        person.put("address", "17 Princess Street");
+//
+//        person.get("name");
+//
+//        person.remove("name");
+//
+//        HashMap<String, Integer> scores = new HashMap<String, Integer>();
+//        scores.put("John", 10);
+//        scores.put("Bob", 7);
+//        scores.put("Charlie", 5);
+//
+//        int score = scores.get("Bob");
 
         /*
         System.out.printf("Hello Dave!");
@@ -59,6 +60,16 @@ public class HelloWorld
         Integer.valueOf("123");
         Double.valueOf("10.5");
         */
+
+        ArrayList<Person> people = new ArrayList<>();
+        people.add(new Person("James", 69, false));
+        people.add(new Person("Paul", 68, true));
+        people.add(new Person("Elvis", 93, false));
+        Collections.sort(people);
+        for(Person p : people)
+        {
+            System.out.println(p);
+        }
 
     }
 }
